@@ -1,0 +1,24 @@
+ 
+#include <stdio.h>
+
+void book_ticket(int recently_booked)
+{
+    static int total_tickets;
+
+    total_tickets = total_tickets + recently_booked;
+
+    printf("Total tickets booked: %dn", total_tickets);
+
+}
+
+int main()
+{
+    /* Say by booking agent */
+    book_ticket(5);
+    /* Say by online */
+    book_ticket(50);
+    /* Say by counter */
+    book_ticket(30);
+
+    return 0;
+}
